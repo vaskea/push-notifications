@@ -4,7 +4,7 @@ export default {
     {
       file: 'dist/plugin.js',
       format: 'iife',
-      name: 'capacitorPushNotifications',
+      name: 'vaskeaPushNotifications',
       globals: {
         '@capacitor/core': 'capacitorExports',
       },
