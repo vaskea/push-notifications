@@ -77,13 +77,13 @@ public class PushNotificationsPlugin extends Plugin {
     public void register(PluginCall call) {
         FirebaseMessaging.getInstance().setAutoInitEnabled(true);
         FirebaseMessaging.getInstance().getToken()
-            .addOnSuccessListener(
-                    (s => {
-                        sendToken(s);
-                    })
-            ).addOnFailureListener(
-                    e => sendError(e.getLocalizedMessage());
-        );
+                .addOnSuccessListener(
+                        (s -> {
+                            sendToken(s);
+                        })
+                ).addOnFailureListener(
+                        e -> sendError(e.getLocalizedMessage())
+                );
         call.resolve();
     }
 
